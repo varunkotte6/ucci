@@ -3,6 +3,8 @@
 [![Python](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)](https://github.com/varunkotte6/ucci/blob/main/pyproject.toml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://github.com/varunkotte6/ucci/blob/main/LICENSE)
 [![arXiv](https://img.shields.io/badge/arXiv-2605.18796-b31b1b)](https://arxiv.org/abs/2605.18796)
+[![PyPI](https://img.shields.io/pypi/v/ucci-router)](https://pypi.org/project/ucci-router/)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/varunkotte6/ucci/blob/main/examples/quickstart.ipynb)
 
 Reference implementation of **UCCI** from Varun Kotte,
 [*UCCI: Calibrated Uncertainty for Cost-Optimal LLM Cascade Routing*](https://arxiv.org/abs/2605.18796),
@@ -40,6 +42,8 @@ transformers), `vllm`, `sklearn`, `bench` (the CoNLL-2003 replication), `docs`, 
 `all` (everything except `vllm`, which needs Linux and a GPU). Python 3.9 or newer.
 
 ## Quickstart
+
+Run it in the browser with the [Colab notebook](https://colab.research.google.com/github/varunkotte6/ucci/blob/main/examples/quickstart.ipynb), or locally:
 
 ```python
 import numpy as np
