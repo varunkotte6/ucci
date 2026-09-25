@@ -5,6 +5,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2605.18796-b31b1b)](https://arxiv.org/abs/2605.18796)
 [![PyPI](https://img.shields.io/pypi/v/ucci-router)](https://pypi.org/project/ucci-router/)
 [![crates.io](https://img.shields.io/crates/v/ucci)](https://crates.io/crates/ucci)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22957160.svg)](https://doi.org/10.5281/zenodo.22957160)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/varunkotte6/ucci/blob/main/examples/quickstart.ipynb)
 
 Reference implementation of **UCCI** from Varun Kotte,
@@ -239,6 +240,19 @@ If you use UCCI or this code, please cite the paper:
   primaryClass  = {cs.LG},
   doi           = {10.48550/arXiv.2605.18796},
   url           = {https://arxiv.org/abs/2605.18796}
+}
+```
+
+To cite the software itself (all versions): [doi:10.5281/zenodo.22957160](https://doi.org/10.5281/zenodo.22957160).
+
+```bibtex
+@software{kotte2026ucci_code,
+  author    = {Kotte, Varun},
+  title     = {ucci: reference implementation of {UCCI}},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22957160},
+  url       = {https://github.com/varunkotte6/ucci}
 }
 ```
 

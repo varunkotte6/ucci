@@ -19,6 +19,19 @@ If you use UCCI or this code, please cite the paper:
 }
 ```
 
+To cite the software itself (all versions): [doi:10.5281/zenodo.22957160](https://doi.org/10.5281/zenodo.22957160).
+
+```bibtex
+@software{kotte2026ucci_code,
+  author    = {Kotte, Varun},
+  title     = {ucci: reference implementation of {UCCI}},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22957160},
+  url       = {https://github.com/varunkotte6/ucci}
+}
+```
+
 The repository's
 [`CITATION.cff`](https://github.com/varunkotte6/ucci/blob/main/CITATION.cff) describes the
 software and names the paper as its preferred citation; GitHub's "Cite this repository" button

@@ -18,6 +18,7 @@ authors:
   - family-names: Kotte
     given-names: Varun
 version: 0.1.1
+doi: "10.5281/zenodo.22957160"
 license: MIT
 repository-code: "https://github.com/varunkotte6/ucci"
 url: "https://arxiv.org/abs/2605.18796"
