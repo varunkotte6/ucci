@@ -1,0 +1,142 @@
+{
+  "id": "resp_67ccd2bed1ec8190b14f964abc0542670bb6a6b452d3795b",
+  "object": "response",
+  "created_at": 1741476542,
+  "status": "completed",
+  "error": null,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": null,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "output": [
+    {
+      "type": "message",
+      "id": "msg_67ccd2bf17f0819081ff3bb2cf6508e60bb6a6b452d3795b",
+      "status": "completed",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "{\"iso\":\"",
+          "annotations": [],
+          "logprobs": [
+            {
+              "token": "{\"",
+              "bytes": [
+                123,
+                34
+              ],
+              "logprob": -0.10536051565782628,
+              "top_logprobs": [
+                {
+                  "token": "{\"",
+                  "bytes": [
+                    123,
+                    34
+                  ],
+                  "logprob": -0.10536051565782628
+                },
+                {
+                  "token": "{",
+                  "bytes": [
+                    123
+                  ],
+                  "logprob": -2.995732273553991
+                }
+              ]
+            },
+            {
+              "token": "iso",
+              "bytes": [
+                105,
+                115,
+                111
+              ],
+              "logprob": -0.5108256237659907,
+              "top_logprobs": [
+                {
+                  "token": "iso",
+                  "bytes": [
+                    105,
+                    115,
+                    111
+                  ],
+                  "logprob": -0.5108256237659907
+                },
+                {
+                  "token": "ISO",
+                  "bytes": [
+                    73,
+                    83,
+                    79
+                  ],
+                  "logprob": -1.0498221244986778
+                }
+              ]
+            },
+            {
+              "token": "\":\"",
+              "bytes": [
+                34,
+                58,
+                34
+              ],
+              "logprob": -0.2231435513142097,
+              "top_logprobs": [
+                {
+                  "token": "\":\"",
+                  "bytes": [
+                    34,
+                    58,
+                    34
+                  ],
+                  "logprob": -0.2231435513142097
+                },
+                {
+                  "token": "\":",
+                  "bytes": [
+                    34,
+                    58
+                  ],
+                  "logprob": -1.8971199848858813
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "parallel_tool_calls": true,
+  "previous_response_id": null,
+  "reasoning": {
+    "effort": null,
+    "summary": null
+  },
+  "store": true,
+  "temperature": 0.0,
+  "text": {
+    "format": {
+      "type": "text"
+    }
+  },
+  "tool_choice": "auto",
+  "tools": [],
+  "top_logprobs": 2,
+  "top_p": 1.0,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 36,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 3,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 39
+  },
+  "user": null,
+  "metadata": {}
+}

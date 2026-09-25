@@ -1,0 +1,45 @@
+[package]
+name = "ucci"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+authors = ["Varun Kotte"]
+license = "MIT"
+description = "UCCI: calibrated uncertainty for cost-optimal LLM cascade routing (token-margin signal, isotonic calibration, constrained threshold selection)"
+repository = "https://github.com/varunkotte6/ucci"
+homepage = "https://github.com/varunkotte6/ucci"
+documentation = "https://docs.rs/ucci"
+readme = "README.md"
+keywords = ["llm", "cascade", "calibration", "routing", "isotonic"]
+categories = ["algorithms", "science", "mathematics"]
+include = [
+    "/src/**/*.rs",
+    "/tests/**/*.rs",
+    "/examples/**/*.rs",
+    "/examples/**/*.json",
+    "/Cargo.toml",
+    "/README.md",
+    "/LICENSE",
+]
+
+[features]
+default = ["json"]
+# Router JSON format (read and write routers fitted by the Python package).
+json = ["dep:serde", "dep:serde_json"]
+
+[dependencies]
+serde = { version = "1.0.190", optional = true, features = ["derive"] }
+serde_json = { version = "1.0.108", optional = true, features = ["float_roundtrip"] }
+
+[dev-dependencies]
+proptest = { version = "1", default-features = false, features = ["std"] }
+serde = { version = "1.0.190", features = ["derive"] }
+serde_json = { version = "1.0.108", features = ["float_roundtrip"] }
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[[example]]
+name = "route"
+required-features = ["json"]

@@ -1,0 +1,228 @@
+{
+  "id": "chatcmpl-5a0c6b1e2f7d4e0f9c8b7a6d5e4f3a2b",
+  "object": "chat.completion",
+  "created": 1758700000,
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"camera\":\"Canon\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [],
+        "reasoning_content": null
+      },
+      "logprobs": {
+        "content": [
+          {
+            "token": "{\"",
+            "logprob": -0.020202707317519466,
+            "bytes": [
+              123,
+              34
+            ],
+            "top_logprobs": [
+              {
+                "token": "{\"",
+                "logprob": -0.020202707317519466,
+                "bytes": [
+                  123,
+                  34
+                ]
+              },
+              {
+                "token": "{",
+                "logprob": -4.605170185988091,
+                "bytes": [
+                  123
+                ]
+              }
+            ]
+          },
+          {
+            "token": "camera",
+            "logprob": -0.10536051565782628,
+            "bytes": [
+              99,
+              97,
+              109,
+              101,
+              114,
+              97
+            ],
+            "top_logprobs": [
+              {
+                "token": "camera",
+                "logprob": -0.10536051565782628,
+                "bytes": [
+                  99,
+                  97,
+                  109,
+                  101,
+                  114,
+                  97
+                ]
+              },
+              {
+                "token": "lens",
+                "logprob": -2.8134107167600364,
+                "bytes": [
+                  108,
+                  101,
+                  110,
+                  115
+                ]
+              }
+            ]
+          },
+          {
+            "token": "\":\"",
+            "logprob": -0.2876820724517809,
+            "bytes": [
+              34,
+              58,
+              34
+            ],
+            "top_logprobs": [
+              {
+                "token": "\":\"",
+                "logprob": -0.2876820724517809,
+                "bytes": [
+                  34,
+                  58,
+                  34
+                ]
+              },
+              {
+                "token": "\":",
+                "logprob": -1.6094379124341003,
+                "bytes": [
+                  34,
+                  58
+                ]
+              }
+            ]
+          },
+          {
+            "token": "Canon",
+            "logprob": -0.5978370007556204,
+            "bytes": [
+              67,
+              97,
+              110,
+              111,
+              110
+            ],
+            "top_logprobs": [
+              {
+                "token": "Canon",
+                "logprob": -0.5978370007556204,
+                "bytes": [
+                  67,
+                  97,
+                  110,
+                  111,
+                  110
+                ]
+              },
+              {
+                "token": "Nikon",
+                "logprob": -0.916290731874155,
+                "bytes": [
+                  78,
+                  105,
+                  107,
+                  111,
+                  110
+                ]
+              }
+            ]
+          },
+          {
+            "token": "\"}",
+            "logprob": -0.030459207484708574,
+            "bytes": [
+              34,
+              125
+            ],
+            "top_logprobs": [
+              {
+                "token": "\"}",
+                "logprob": -0.030459207484708574,
+                "bytes": [
+                  34,
+                  125
+                ]
+              },
+              {
+                "token": "\",",
+                "logprob": -3.912023005428146,
+                "bytes": [
+                  34,
+                  44
+                ]
+              }
+            ]
+          },
+          {
+            "token": "<|im_end|>",
+            "logprob": -0.01005033585350145,
+            "bytes": [
+              60,
+              124,
+              105,
+              109,
+              95,
+              101,
+              110,
+              100,
+              124,
+              62
+            ],
+            "top_logprobs": [
+              {
+                "token": "<|im_end|>",
+                "logprob": -0.01005033585350145,
+                "bytes": [
+                  60,
+                  124,
+                  105,
+                  109,
+                  95,
+                  101,
+                  110,
+                  100,
+                  124,
+                  62
+                ]
+              },
+              {
+                "token": "\n",
+                "logprob": -5.521460917862246,
+                "bytes": [
+                  10
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "finish_reason": "stop",
+      "stop_reason": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "prompt_tokens": 38,
+    "total_tokens": 44,
+    "completion_tokens": 6,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null,
+  "kv_transfer_params": null
+}

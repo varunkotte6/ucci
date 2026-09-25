@@ -1,0 +1,219 @@
+[
+  {
+    "index": 0,
+    "content": " Canon",
+    "tokens": [
+      8290
+    ],
+    "stop": false,
+    "id_slot": 0,
+    "tokens_predicted": 1,
+    "tokens_evaluated": 21,
+    "completion_probabilities": [
+      {
+        "id": 8290,
+        "token": " Canon",
+        "bytes": [
+          32,
+          67,
+          97,
+          110,
+          111,
+          110
+        ],
+        "logprob": -0.2231435513142097,
+        "top_logprobs": [
+          {
+            "id": 8290,
+            "token": " Canon",
+            "bytes": [
+              32,
+              67,
+              97,
+              110,
+              111,
+              110
+            ],
+            "logprob": -0.2231435513142097
+          },
+          {
+            "id": 37231,
+            "token": " Nikon",
+            "bytes": [
+              32,
+              78,
+              105,
+              107,
+              111,
+              110
+            ],
+            "logprob": -1.8971199848858813
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "content": " ",
+    "tokens": [
+      220
+    ],
+    "stop": false,
+    "id_slot": 0,
+    "tokens_predicted": 2,
+    "tokens_evaluated": 21,
+    "completion_probabilities": [
+      {
+        "id": 220,
+        "token": " ",
+        "bytes": [
+          32
+        ],
+        "logprob": -0.5108256237659907,
+        "top_logprobs": [
+          {
+            "id": 220,
+            "token": " ",
+            "bytes": [
+              32
+            ],
+            "logprob": -0.5108256237659907
+          },
+          {
+            "id": 10,
+            "token": "5",
+            "bytes": [
+              53
+            ],
+            "logprob": -1.2039728043259361
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "content": "5",
+    "tokens": [
+      20
+    ],
+    "stop": false,
+    "id_slot": 0,
+    "tokens_predicted": 3,
+    "tokens_evaluated": 21,
+    "completion_probabilities": [
+      {
+        "id": 20,
+        "token": "5",
+        "bytes": [
+          53
+        ],
+        "logprob": -0.10536051565782628,
+        "top_logprobs": [
+          {
+            "id": 20,
+            "token": "5",
+            "bytes": [
+              53
+            ],
+            "logprob": -0.10536051565782628
+          },
+          {
+            "id": 21,
+            "token": "6",
+            "bytes": [
+              54
+            ],
+            "logprob": -2.995732273553991
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "content": "",
+    "tokens": [
+      2
+    ],
+    "stop": false,
+    "id_slot": 0,
+    "tokens_predicted": 4,
+    "tokens_evaluated": 21,
+    "completion_probabilities": [
+      {
+        "id": 2,
+        "token": "",
+        "bytes": [],
+        "logprob": -0.030459207484708574,
+        "top_logprobs": [
+          {
+            "id": 2,
+            "token": "",
+            "bytes": [],
+            "logprob": -0.030459207484708574
+          },
+          {
+            "id": 13,
+            "token": "\n",
+            "bytes": [
+              10
+            ],
+            "logprob": -4.605170185988091
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "content": "",
+    "tokens": [],
+    "id_slot": 0,
+    "stop": true,
+    "model": "gpt-3.5-turbo",
+    "tokens_predicted": 4,
+    "tokens_evaluated": 21,
+    "generation_settings": {
+      "n_predict": 256,
+      "seed": 4294967295,
+      "temperature": 0.800000011920929,
+      "dynatemp_range": 0.0,
+      "dynatemp_exponent": 1.0,
+      "top_k": 1,
+      "top_p": 0.949999988079071,
+      "min_p": 0.05000000074505806,
+      "n_probs": 2,
+      "min_keep": 0,
+      "post_sampling_probs": false,
+      "stop": [],
+      "samplers": [
+        "penalties",
+        "dry",
+        "top_k",
+        "typ_p",
+        "top_p",
+        "min_p",
+        "xtc",
+        "temperature"
+      ]
+    },
+    "prompt": "<s> Query: canon 5d\nCamera:",
+    "has_new_line": false,
+    "truncated": false,
+    "stop_type": "eos",
+    "stopping_word": "",
+    "tokens_cached": 24,
+    "timings": {
+      "prompt_n": 21,
+      "prompt_ms": 12.3,
+      "prompt_per_token_ms": 0.59,
+      "prompt_per_second": 1707.3,
+      "predicted_n": 4,
+      "predicted_ms": 31.9,
+      "predicted_per_token_ms": 7.98,
+      "predicted_per_second": 125.4
+    }
+  }
+]

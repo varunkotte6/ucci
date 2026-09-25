@@ -1,0 +1,216 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ucci"
+version = "0.1.0"
+description = "UCCI: calibrated uncertainty for cost-optimal LLM cascade routing (token-margin signal, isotonic calibration, constrained threshold selection)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Varun Kotte" }]
+keywords = [
+    "LLM cascade",
+    "model routing",
+    "calibration",
+    "isotonic regression",
+    "selective prediction",
+    "inference cost",
+    "uncertainty quantification",
+    "large language models",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+# The core (signal, calibration, policy, router, metrics, io, cli, online,
+# baselines, integrations payload parsing) needs numpy only.
+dependencies = ["numpy>=1.20"]
+
+[project.optional-dependencies]
+# scikit-learn is only used by the test suite (isotonic parity checks).
+sklearn = ["scikit-learn>=0.24"]
+# ucci.plotting (reliability diagrams, Pareto plots).
+plot = ["matplotlib>=3.3"]
+# The OpenAI adapters read payloads by duck typing; the SDK is only needed to
+# call the API (ucci.integrations.openai.make_chat_fn, examples/openai_cascade.py).
+openai = ["openai>=1.0"]
+# vLLM needs Linux and a supported GPU; it is not part of "all".
+vllm = ["vllm"]
+# transformers >= 4.38 returns raw per-step logits (output_logits); older
+# releases fall back to processed scores.
+transformers = ["torch", "transformers>=4.38"]
+# The CoNLL-2003 replication in benchmarks/conll2003 (exact pins of the
+# reference run are in benchmarks/conll2003/requirements.txt).
+bench = [
+    "torch",
+    "transformers>=4.43",
+    "datasets>=2.14",
+    "matplotlib>=3.3",
+]
+test = [
+    "pytest>=7",
+    "pytest-cov>=4",
+    "hypothesis>=6",
+    "scikit-learn>=0.24",
+    "matplotlib>=3.3",
+]
+lint = [
+    "ruff>=0.6",
+    "mypy>=1.10",
+]
+docs = [
+    "mkdocs>=1.6,<2",  # MkDocs 2.0 removes the plugin system mkdocstrings needs
+    "mkdocs-material>=9.5",
+    "mkdocstrings>=1.0",
+    "mkdocstrings-python>=2.0",
+]
+dev = [
+    "ucci[test,lint,docs]",
+    "build>=1.0",
+    "twine>=5.0",
+    "pre-commit>=3.5",
+]
+all = ["ucci[sklearn,plot,openai,transformers]"]
+
+[project.scripts]
+ucci = "ucci.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/varunkotte6/ucci"
+Repository = "https://github.com/varunkotte6/ucci"
+Documentation = "https://github.com/varunkotte6/ucci/tree/main/docs"
+Paper = "https://arxiv.org/abs/2605.18796"
+Changelog = "https://github.com/varunkotte6/ucci/blob/main/CHANGELOG.md"
+Issues = "https://github.com/varunkotte6/ucci/issues"
+
+# ---------------------------------------------------------------------------
+# Build
+# ---------------------------------------------------------------------------
+
+[tool.hatch.build.targets.wheel]
+# Everything in src/ucci ships, including the py.typed marker (PEP 561).
+packages = ["src/ucci"]
+
+[tool.hatch.build.targets.sdist]
+# The sdist carries what is needed to run the test suite and build the docs.
+# Benchmark logs (runs/) and the Rust crate are left out; the crate has its
+# own package (rust/Cargo.toml).
+include = [
+    "/src",
+    "/tests",
+    "/tools/make_golden.py",
+    "/docs",
+    "/examples",
+    "/mkdocs.yml",
+    "/README.md",
+    "/CHANGELOG.md",
+    "/CONTRIBUTING.md",
+    "/CITATION.cff",
+    "/LICENSE",
+]
+exclude = [
+    "__pycache__",
+    "*.pyc",
+    ".DS_Store",
+]
+
+# ---------------------------------------------------------------------------
+# Lint and type checking
+# ---------------------------------------------------------------------------
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+extend-exclude = [".toolchain", "rust", "site"]
+
+[tool.ruff.format]
+# Code blocks in README.md and docs/ keep their hand layout (aligned comments,
+# compact payload literals); they are executed by docs/_ext/check_snippets.py.
+exclude = ["*.md"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "N", "SIM", "RUF"]
+# online.py keeps `noqa: TRY004` markers (ValueError after an isinstance
+# check, a deliberate convention); TRY is not selected, so tell RUF100 the
+# code is known.
+external = ["TRY004"]
+
+[tool.ruff.lint.per-file-ignores]
+# The benchmark scripts, the examples and ucci.plotting are written for the
+# Python 3.9 runtime of the benchmark environment (typing.Optional/Tuple),
+# with wider lines and math-style names (e.g. N for a sample size).
+"benchmarks/**" = ["E501", "UP006", "UP007", "UP035", "UP037", "UP045", "N803", "N806", "N812", "RUF005", "SIM108"]
+"examples/**" = ["E501", "UP006", "UP007", "UP035", "UP037", "UP045", "N803", "N806", "RUF005"]
+"src/ucci/plotting.py" = ["E501", "UP006", "UP007", "UP035", "UP037", "UP045"]
+"tests/test_plotting.py" = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["ucci"]
+
+[tool.mypy]
+files = ["src/ucci"]
+strict = true
+show_error_codes = true
+pretty = true
+
+[[tool.mypy.overrides]]
+# Optional dependencies, imported lazily inside the integrations only.
+module = [
+    "torch",
+    "torch.*",
+    "transformers",
+    "transformers.*",
+    "vllm",
+    "vllm.*",
+    "openai",
+    "openai.*",
+    "sklearn",
+    "sklearn.*",
+]
+ignore_missing_imports = true
+
+# ---------------------------------------------------------------------------
+# Tests and coverage
+# ---------------------------------------------------------------------------
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = ["-ra", "--strict-markers"]
+xfail_strict = true
+
+[tool.coverage.run]
+source = ["ucci"]
+branch = true
+
+[tool.coverage.paths]
+source = ["src/ucci", "*/site-packages/ucci"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+precision = 1
+exclude_also = [
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "@overload",
+    "if __name__ == .__main__.:",
+    "\\.\\.\\.$",
+]

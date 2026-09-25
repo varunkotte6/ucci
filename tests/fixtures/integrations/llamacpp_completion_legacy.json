@@ -1,0 +1,88 @@
+{
+  "content": " Canon EOS R5",
+  "id_slot": 0,
+  "stop": true,
+  "model": "models/7B/ggml-model-q4_0.gguf",
+  "tokens_predicted": 4,
+  "tokens_evaluated": 18,
+  "generation_settings": {
+    "n_ctx": 4096,
+    "n_predict": 256,
+    "model": "models/7B/ggml-model-q4_0.gguf",
+    "seed": 4294967295,
+    "temperature": -1.0,
+    "top_k": 40,
+    "top_p": 0.95,
+    "n_probs": 2,
+    "min_keep": 0
+  },
+  "prompt": "Query: canon eos r5\nCamera:",
+  "has_new_line": false,
+  "truncated": false,
+  "stopped_eos": true,
+  "stopped_word": false,
+  "stopped_limit": false,
+  "stopping_word": "",
+  "tokens_cached": 21,
+  "timings": {
+    "prompt_n": 18,
+    "prompt_ms": 10.1,
+    "predicted_n": 4,
+    "predicted_ms": 30.2
+  },
+  "index": 0,
+  "completion_probabilities": [
+    {
+      "content": " Canon",
+      "probs": [
+        {
+          "tok_str": " Canon",
+          "prob": 0.7
+        },
+        {
+          "tok_str": " Nikon",
+          "prob": 0.2
+        }
+      ]
+    },
+    {
+      "content": " EOS",
+      "probs": [
+        {
+          "tok_str": " EOS",
+          "prob": 0.85
+        },
+        {
+          "tok_str": " R",
+          "prob": 0.1
+        }
+      ]
+    },
+    {
+      "content": " R5",
+      "probs": [
+        {
+          "tok_str": " R5",
+          "prob": 0.6
+        },
+        {
+          "tok_str": " R6",
+          "prob": 0.3
+        }
+      ]
+    },
+    {
+      "content": "",
+      "probs": [
+        {
+          "tok_str": "",
+          "prob": 0.99
+        },
+        {
+          "tok_str": "\n",
+          "prob": 0.005
+        }
+      ]
+    }
+  ]
+}

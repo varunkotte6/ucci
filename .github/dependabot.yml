@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # Keep the pinned GitHub Actions current.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
+
+  # The package declares lower bounds only; raise one only when a new release
+  # falls outside the declared range.
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: monthly
+    versioning-strategy: increase-if-necessary
+    open-pull-requests-limit: 5

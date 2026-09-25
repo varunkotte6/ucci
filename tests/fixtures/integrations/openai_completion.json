@@ -1,0 +1,49 @@
+{
+  "id": "cmpl-8f3a7b2c9d1e4f5a6b7c8d9e0f1a2b3c",
+  "object": "text_completion",
+  "created": 1741570300,
+  "model": "gpt-3.5-turbo-instruct",
+  "choices": [
+    {
+      "text": " Canon EOS R5",
+      "index": 0,
+      "logprobs": {
+        "tokens": [
+          " Canon",
+          " EOS",
+          " R5"
+        ],
+        "token_logprobs": [
+          -0.5108256237659907,
+          -0.2231435513142097,
+          -0.35667494393873245
+        ],
+        "top_logprobs": [
+          {
+            " Canon": -0.5108256237659907,
+            " Nikon": -1.2039728043259361
+          },
+          {
+            " EOS": -0.2231435513142097,
+            " 5": -2.3025850929940455
+          },
+          {
+            " R5": -0.35667494393873245,
+            " R6": -1.3862943611198906
+          }
+        ],
+        "text_offset": [
+          30,
+          36,
+          40
+        ]
+      },
+      "finish_reason": "length"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9,
+    "completion_tokens": 3,
+    "total_tokens": 12
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "index": 0,
+  "content": " Canon 5",
+  "tokens": [],
+  "id_slot": 0,
+  "stop": true,
+  "model": "gpt-3.5-turbo",
+  "tokens_predicted": 4,
+  "tokens_evaluated": 21,
+  "generation_settings": {
+    "n_predict": 256,
+    "seed": 4294967295,
+    "temperature": 0.800000011920929,
+    "dynatemp_range": 0.0,
+    "dynatemp_exponent": 1.0,
+    "top_k": 1,
+    "top_p": 0.949999988079071,
+    "min_p": 0.05000000074505806,
+    "n_probs": 2,
+    "min_keep": 0,
+    "post_sampling_probs": true,
+    "stop": [],
+    "samplers": [
+      "penalties",
+      "dry",
+      "top_k",
+      "typ_p",
+      "top_p",
+      "min_p",
+      "xtc",
+      "temperature"
+    ]
+  },
+  "prompt": "<s> Query: canon 5d\nCamera:",
+  "has_new_line": false,
+  "truncated": false,
+  "stop_type": "eos",
+  "stopping_word": "",
+  "tokens_cached": 24,
+  "timings": {
+    "prompt_n": 21,
+    "prompt_ms": 12.3,
+    "prompt_per_token_ms": 0.59,
+    "prompt_per_second": 1707.3,
+    "predicted_n": 4,
+    "predicted_ms": 31.9,
+    "predicted_per_token_ms": 7.98,
+    "predicted_per_second": 125.4
+  },
+  "completion_probabilities": [
+    {
+      "id": 8290,
+      "token": " Canon",
+      "bytes": [
+        32,
+        67,
+        97,
+        110,
+        111,
+        110
+      ],
+      "prob": 1.0,
+      "top_probs": [
+        {
+          "id": 8290,
+          "token": " Canon",
+          "bytes": [
+            32,
+            67,
+            97,
+            110,
+            111,
+            110
+          ],
+          "prob": 1.0
+        }
+      ]
+    },
+    {
+      "id": 220,
+      "token": " ",
+      "bytes": [
+        32
+      ],
+      "prob": 1.0,
+      "top_probs": [
+        {
+          "id": 220,
+          "token": " ",
+          "bytes": [
+            32
+          ],
+          "prob": 1.0
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "token": "5",
+      "bytes": [
+        53
+      ],
+      "prob": 1.0,
+      "top_probs": [
+        {
+          "id": 20,
+          "token": "5",
+          "bytes": [
+            53
+          ],
+          "prob": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "token": "",
+      "bytes": [],
+      "prob": 1.0,
+      "top_probs": [
+        {
+          "id": 2,
+          "token": "",
+          "bytes": [],
+          "prob": 1.0
+        }
+      ]
+    }
+  ]
+}

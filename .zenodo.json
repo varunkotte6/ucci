@@ -1,0 +1,29 @@
+{
+  "title": "ucci: reference implementation of UCCI (Calibrated Uncertainty for Cost-Optimal LLM Cascade Routing)",
+  "upload_type": "software",
+  "description": "<p>Reference implementation of UCCI (Varun Kotte, arXiv:2605.18796, 2026), a calibration-first router for two-model LLM cascades. It maps the small model's token-margin uncertainty to a per-query error probability by isotonic regression and escalates to the large model when that probability exceeds the threshold selected by constrained cost minimization on validation data.</p><p>The package provides the core method (numpy only), serving adapters for OpenAI-compatible APIs, vLLM, Hugging Face transformers and llama.cpp, the paper's baselines and evaluation protocol, a command line tool, a Rust crate with bit-identical results on shared golden vectors, and a public replication on CoNLL-2003.</p>",
+  "creators": [
+    {
+      "name": "Kotte, Varun"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "version": "0.1.0",
+  "keywords": [
+    "LLM cascade",
+    "model routing",
+    "calibration",
+    "isotonic regression",
+    "selective prediction",
+    "inference cost",
+    "uncertainty quantification"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.48550/arXiv.2605.18796",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint"
+    }
+  ]
+}

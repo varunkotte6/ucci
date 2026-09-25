@@ -1,0 +1,94 @@
+{
+  "request_id": "0",
+  "prompt": "Extract entities from this photo search query.\nReturn JSON with fields: camera, lens,\naperture, shutter_speed, iso, focal_length.\n\nQuery: canon with 50mm\nOutput:\n",
+  "prompt_token_ids": [
+    28959,
+    14744,
+    504,
+    419,
+    6548,
+    2711,
+    3239,
+    13
+  ],
+  "prompt_logprobs": null,
+  "outputs": [
+    {
+      "index": 0,
+      "text": "{\"camera\":\"Canon",
+      "token_ids": [
+        515,
+        43023,
+        3252,
+        6713,
+        151645
+      ],
+      "cumulative_logprob": -1.2299492907296967,
+      "logprobs": [
+        {
+          "515": {
+            "logprob": -0.05129329438755058,
+            "rank": 1,
+            "decoded_token": "{\""
+          },
+          "90": {
+            "logprob": -3.506557897319982,
+            "rank": 2,
+            "decoded_token": "{"
+          }
+        },
+        {
+          "43023": {
+            "logprob": -0.35667494393873245,
+            "rank": 1,
+            "decoded_token": "camera"
+          },
+          "18449": {
+            "logprob": -1.6094379124341003,
+            "rank": 2,
+            "decoded_token": "lens"
+          }
+        },
+        {
+          "3252": {
+            "logprob": -0.6931471805599453,
+            "rank": 1,
+            "decoded_token": "\":\""
+          },
+          "788": {
+            "logprob": -0.7985076962177716,
+            "rank": 2,
+            "decoded_token": "\":"
+          }
+        },
+        {
+          "6713": {
+            "logprob": -0.12783337150988489,
+            "rank": 1,
+            "decoded_token": "Canon"
+          },
+          "45": {
+            "logprob": -2.3025850929940455,
+            "rank": 2,
+            "decoded_token": "N"
+          }
+        },
+        {
+          "151645": {
+            "logprob": -0.0010005003335835344,
+            "rank": 1,
+            "decoded_token": "<|im_end|>"
+          },
+          "198": {
+            "logprob": -7.600902459542082,
+            "rank": 2,
+            "decoded_token": "\n"
+          }
+        }
+      ],
+      "finish_reason": "stop",
+      "stop_reason": null
+    }
+  ],
+  "finished": true
+}

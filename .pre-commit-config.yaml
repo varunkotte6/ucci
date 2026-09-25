@@ -1,0 +1,35 @@
+# pre-commit hooks: `pip install pre-commit && pre-commit install`.
+# Generated data (golden vectors, fixtures, benchmark logs) is checked byte for
+# byte elsewhere, so the fixers leave it alone.
+exclude: ^(tests/golden/|tests/fixtures/|benchmarks/conll2003/runs/)
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+        args: ["--maxkb=1024"]
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-toml
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: ["--fix=lf"]
+      - id: trailing-whitespace
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.9
+    hooks:
+      - id: ruff-check
+      - id: ruff-format
+
+  - repo: local
+    hooks:
+      # House style: no em or en dashes anywhere (code, comments, docs).
+      # pygrep matches bytes, so the pattern is the UTF-8 encoding of U+2013 and U+2014.
+      - id: no-long-dashes
+        name: no em or en dashes
+        language: pygrep
+        entry: '\xe2\x80[\x93\x94]'
+        types: [text]

@@ -1,0 +1,139 @@
+site_name: UCCI
+site_description: >-
+  Reference implementation of UCCI: calibrated uncertainty for cost-optimal LLM cascade
+  routing (Kotte, arXiv:2605.18796).
+site_author: Varun Kotte
+site_url: https://varunkotte6.github.io/ucci/
+repo_url: https://github.com/varunkotte6/ucci
+repo_name: varunkotte6/ucci
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2026 Varun Kotte. MIT License.
+
+# Sphinx-role rewriting extension and the snippet checker are build tools, not pages.
+exclude_docs: |
+  _ext/
+
+validation:
+  omitted_files: warn
+  absolute_links: info
+  unrecognized_links: warn
+  anchors: warn
+  nav:
+    not_found: warn
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: ["."]
+      check_paths: true
+  - pymdownx.superfences
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: numpy
+            docstring_section_style: table
+            extensions:
+              - docs/_ext/griffe_rst_roles.py:RstRoles
+            filters: ["!^_"]
+            heading_level: 2
+            members_order: source
+            merge_init_into_class: true
+            separate_signature: true
+            show_root_heading: true
+            show_root_full_path: true
+            show_signature_annotations: true
+            show_source: false
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            signature_crossrefs: false
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - Installation: installation.md
+      - Quickstart: quickstart.md
+  - Method:
+      - The method: method.md
+      - Paper to code: paper_mapping.md
+      - FAQ: faq.md
+  - Guides:
+      - guides/index.md
+      - OpenAI-compatible APIs: guides/openai.md
+      - vLLM: guides/vllm.md
+      - Hugging Face transformers: guides/transformers.md
+      - llama.cpp: guides/llamacpp.md
+      - Collecting data from live traffic: guides/live_traffic.md
+      - Command line: guides/cli.md
+      - Baselines and the comparison protocol: guides/baselines.md
+      - Monitoring and recalibration: guides/monitoring.md
+      - Rust: guides/rust.md
+  - Benchmarks: benchmarks.md
+  - API reference:
+      - api/index.md
+      - ucci.router: api/router.md
+      - ucci.signal: api/signal.md
+      - ucci.calibration: api/calibration.md
+      - ucci.policy: api/policy.md
+      - ucci.metrics: api/metrics.md
+      - ucci.io: api/io.md
+      - ucci.baselines: api/baselines.md
+      - ucci.integrations: api/integrations.md
+      - ucci.online: api/online.md
+      - ucci.plotting: api/plotting.md
+      - ucci.cli: api/cli.md
+  - Citing: citing.md
+  - Changelog: changelog.md

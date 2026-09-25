@@ -1,0 +1,364 @@
+[
+  {
+    "id": "chatcmpl-B9MHDbslfkBeAs8l4bebGdFOJ6PeG",
+    "object": "chat.completion.chunk",
+    "created": 1741570283,
+    "model": "gpt-4o-mini-2024-07-18",
+    "system_fingerprint": "fp_06737a9306",
+    "choices": [
+      {
+        "index": 0,
+        "delta": {
+          "role": "assistant",
+          "content": "",
+          "refusal": null
+        },
+        "logprobs": {
+          "content": [],
+          "refusal": null
+        },
+        "finish_reason": null
+      }
+    ],
+    "usage": null
+  },
+  {
+    "id": "chatcmpl-B9MHDbslfkBeAs8l4bebGdFOJ6PeG",
+    "object": "chat.completion.chunk",
+    "created": 1741570283,
+    "model": "gpt-4o-mini-2024-07-18",
+    "system_fingerprint": "fp_06737a9306",
+    "choices": [
+      {
+        "index": 0,
+        "delta": {
+          "content": "{\""
+        },
+        "logprobs": {
+          "content": [
+            {
+              "token": "{\"",
+              "logprob": -0.020202707317519466,
+              "bytes": [
+                123,
+                34
+              ],
+              "top_logprobs": [
+                {
+                  "token": "{\"",
+                  "logprob": -0.020202707317519466,
+                  "bytes": [
+                    123,
+                    34
+                  ]
+                },
+                {
+                  "token": "{",
+                  "logprob": -4.605170185988091,
+                  "bytes": [
+                    123
+                  ]
+                },
+                {
+                  "token": "```",
+                  "logprob": -5.298317366548036,
+                  "bytes": [
+                    96,
+                    96,
+                    96
+                  ]
+                }
+              ]
+            }
+          ],
+          "refusal": null
+        },
+        "finish_reason": null
+      }
+    ],
+    "usage": null
+  },
+  {
+    "id": "chatcmpl-B9MHDbslfkBeAs8l4bebGdFOJ6PeG",
+    "object": "chat.completion.chunk",
+    "created": 1741570283,
+    "model": "gpt-4o-mini-2024-07-18",
+    "system_fingerprint": "fp_06737a9306",
+    "choices": [
+      {
+        "index": 0,
+        "delta": {
+          "content": "camera"
+        },
+        "logprobs": {
+          "content": [
+            {
+              "token": "camera",
+              "logprob": -0.10536051565782628,
+              "bytes": [
+                99,
+                97,
+                109,
+                101,
+                114,
+                97
+              ],
+              "top_logprobs": [
+                {
+                  "token": "camera",
+                  "logprob": -0.10536051565782628,
+                  "bytes": [
+                    99,
+                    97,
+                    109,
+                    101,
+                    114,
+                    97
+                  ]
+                },
+                {
+                  "token": "lens",
+                  "logprob": -2.8134107167600364,
+                  "bytes": [
+                    108,
+                    101,
+                    110,
+                    115
+                  ]
+                },
+                {
+                  "token": "aperture",
+                  "logprob": -3.912023005428146,
+                  "bytes": [
+                    97,
+                    112,
+                    101,
+                    114,
+                    116,
+                    117,
+                    114,
+                    101
+                  ]
+                }
+              ]
+            }
+          ],
+          "refusal": null
+        },
+        "finish_reason": null
+      }
+    ],
+    "usage": null
+  },
+  {
+    "id": "chatcmpl-B9MHDbslfkBeAs8l4bebGdFOJ6PeG",
+    "object": "chat.completion.chunk",
+    "created": 1741570283,
+    "model": "gpt-4o-mini-2024-07-18",
+    "system_fingerprint": "fp_06737a9306",
+    "choices": [
+      {
+        "index": 0,
+        "delta": {
+          "content": "\":\""
+        },
+        "logprobs": {
+          "content": [
+            {
+              "token": "\":\"",
+              "logprob": -0.2876820724517809,
+              "bytes": [
+                34,
+                58,
+                34
+              ],
+              "top_logprobs": [
+                {
+                  "token": "\":\"",
+                  "logprob": -0.2876820724517809,
+                  "bytes": [
+                    34,
+                    58,
+                    34
+                  ]
+                },
+                {
+                  "token": "\":",
+                  "logprob": -1.6094379124341003,
+                  "bytes": [
+                    34,
+                    58
+                  ]
+                },
+                {
+                  "token": "\":[\"",
+                  "logprob": -3.506557897319982,
+                  "bytes": [
+                    34,
+                    58,
+                    91,
+                    34
+                  ]
+                }
+              ]
+            }
+          ],
+          "refusal": null
+        },
+        "finish_reason": null
+      }
+    ],
+    "usage": null
+  },
+  {
+    "id": "chatcmpl-B9MHDbslfkBeAs8l4bebGdFOJ6PeG",
+    "object": "chat.completion.chunk",
+    "created": 1741570283,
+    "model": "gpt-4o-mini-2024-07-18",
+    "system_fingerprint": "fp_06737a9306",
+    "choices": [
+      {
+        "index": 0,
+        "delta": {
+          "content": "Canon"
+        },
+        "logprobs": {
+          "content": [
+            {
+              "token": "Canon",
+              "logprob": -0.5978370007556204,
+              "bytes": [
+                67,
+                97,
+                110,
+                111,
+                110
+              ],
+              "top_logprobs": [
+                {
+                  "token": "Canon",
+                  "logprob": -0.5978370007556204,
+                  "bytes": [
+                    67,
+                    97,
+                    110,
+                    111,
+                    110
+                  ]
+                },
+                {
+                  "token": "Nikon",
+                  "logprob": -0.916290731874155,
+                  "bytes": [
+                    78,
+                    105,
+                    107,
+                    111,
+                    110
+                  ]
+                },
+                {
+                  "token": "Sony",
+                  "logprob": -3.912023005428146,
+                  "bytes": [
+                    83,
+                    111,
+                    110,
+                    121
+                  ]
+                }
+              ]
+            }
+          ],
+          "refusal": null
+        },
+        "finish_reason": null
+      }
+    ],
+    "usage": null
+  },
+  {
+    "id": "chatcmpl-B9MHDbslfkBeAs8l4bebGdFOJ6PeG",
+    "object": "chat.completion.chunk",
+    "created": 1741570283,
+    "model": "gpt-4o-mini-2024-07-18",
+    "system_fingerprint": "fp_06737a9306",
+    "choices": [
+      {
+        "index": 0,
+        "delta": {
+          "content": "\"}"
+        },
+        "logprobs": {
+          "content": [
+            {
+              "token": "\"}",
+              "logprob": -0.030459207484708574,
+              "bytes": [
+                34,
+                125
+              ],
+              "top_logprobs": [
+                {
+                  "token": "\"}",
+                  "logprob": -0.030459207484708574,
+                  "bytes": [
+                    34,
+                    125
+                  ]
+                },
+                {
+                  "token": "\",",
+                  "logprob": -3.912023005428146,
+                  "bytes": [
+                    34,
+                    44
+                  ]
+                },
+                {
+                  "token": "\"",
+                  "logprob": -5.298317366548036,
+                  "bytes": [
+                    34
+                  ]
+                }
+              ]
+            }
+          ],
+          "refusal": null
+        },
+        "finish_reason": null
+      }
+    ],
+    "usage": null
+  },
+  {
+    "id": "chatcmpl-B9MHDbslfkBeAs8l4bebGdFOJ6PeG",
+    "object": "chat.completion.chunk",
+    "created": 1741570283,
+    "model": "gpt-4o-mini-2024-07-18",
+    "system_fingerprint": "fp_06737a9306",
+    "choices": [
+      {
+        "index": 0,
+        "delta": {},
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": null
+  },
+  {
+    "id": "chatcmpl-B9MHDbslfkBeAs8l4bebGdFOJ6PeG",
+    "object": "chat.completion.chunk",
+    "created": 1741570283,
+    "model": "gpt-4o-mini-2024-07-18",
+    "system_fingerprint": "fp_06737a9306",
+    "choices": [],
+    "usage": {
+      "prompt_tokens": 41,
+      "completion_tokens": 5,
+      "total_tokens": 46
+    }
+  }
+]
