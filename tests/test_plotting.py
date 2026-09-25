@@ -49,7 +49,7 @@ def test_missing_matplotlib_gives_install_hint(monkeypatch: pytest.MonkeyPatch) 
     monkeypatch.setitem(sys.modules, "matplotlib.figure", None)
     with pytest.raises(ImportError, match=r"pip install"):
         plotting.reliability_diagram([0.1, 0.9], [0, 1])
-    with pytest.raises(ImportError, match=r"ucci\[plot\]"):
+    with pytest.raises(ImportError, match=r"ucci-router\[plot\]"):
         plotting.pareto_plot({"a": ([1.0, 2.0], [0.5, 0.6])})
 
 

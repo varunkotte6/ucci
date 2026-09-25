@@ -29,9 +29,11 @@ Documentation: [`docs/`](https://github.com/varunkotte6/ucci/blob/main/docs/inde
 ## Install
 
 ```bash
-pip install "ucci @ git+https://github.com/varunkotte6/ucci"                # numpy only
-pip install "ucci[plot,openai] @ git+https://github.com/varunkotte6/ucci"   # with extras
+pip install ucci-router                    # numpy only
+pip install "ucci-router[plot,openai]"     # with extras
 ```
+
+The package imports as `ucci` and installs the `ucci` command.
 
 Extras: `plot` (matplotlib), `openai` (the SDK, for live calls), `transformers` (torch and
 transformers), `vllm`, `sklearn`, `bench` (the CoNLL-2003 replication), `docs`, `dev`, and

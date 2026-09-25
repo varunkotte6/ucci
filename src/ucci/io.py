@@ -74,10 +74,11 @@ def _package_version() -> str:
     """Installed version of this package, or ``"0.1.0"`` when not installed."""
     from importlib import metadata
 
-    try:
-        return metadata.version("ucci")
-    except metadata.PackageNotFoundError:
-        pass
+    for name in ("ucci-router", "ucci"):
+        try:
+            return metadata.version(name)
+        except metadata.PackageNotFoundError:
+            pass
     finder = getattr(metadata, "packages_distributions", None)  # Python >= 3.10
     if finder is not None:
         for dist in finder().get("ucci", []):

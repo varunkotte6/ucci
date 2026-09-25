@@ -3,7 +3,7 @@
 `ucci.integrations.openai` computes \(u(x)\) from OpenAI-format responses: Chat Completions
 (whole, per choice, or streamed), legacy Completions and the Responses API. It reads SDK objects
 and plain dicts (for example parsed from a JSON log) alike, and never imports the `openai`
-package; install the SDK (`pip install "ucci[openai]"`) only to make calls.
+package; install the SDK (`pip install "ucci-router[openai]"`) only to make calls.
 
 ## Chat Completions
 

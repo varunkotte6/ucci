@@ -11,7 +11,7 @@
   (Section 6.2, cost-accuracy Pareto frontier with end-to-end evaluation).
 * :func:`efficient_mask`: which (cost, accuracy) points are not dominated.
 
-matplotlib is an optional dependency (``pip install "ucci[plot]"``) and is
+matplotlib is an optional dependency (``pip install "ucci-router[plot]"``) and is
 imported only when a plotting function is called, so ``import ucci.plotting``
 works without it. The functions build figures with the object-oriented API
 (:class:`matplotlib.figure.Figure`), never touch pyplot's global state, and
@@ -64,7 +64,7 @@ def _require_matplotlib() -> Any:
     except ImportError as exc:  # pragma: no cover - exercised only without matplotlib
         raise ImportError(
             "ucci.plotting needs matplotlib, which is not installed. "
-            'Install it with: pip install "ucci[plot]"  (or: pip install matplotlib)'
+            'Install it with: pip install "ucci-router[plot]"  (or: pip install matplotlib)'
         ) from exc
     del matplotlib
     return Figure

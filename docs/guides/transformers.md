@@ -4,7 +4,7 @@ With the full per-step logits available, `ucci.integrations.transformers` comput
 probabilities exactly, with a softmax over the whole vocabulary, and returns one
 `TokenSignals` per batch item. It also returns the full-vocabulary mean entropy and mean max
 probability used by the paper's entropy baseline and signal ablation. Install with
-`pip install "ucci[transformers]"` (transformers 4.38 or newer returns the raw logits).
+`pip install "ucci-router[transformers]"` (transformers 4.38 or newer returns the raw logits).
 
 ## One call
 
