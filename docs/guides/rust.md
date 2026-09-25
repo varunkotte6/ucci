@@ -10,11 +10,11 @@ the baselines, the command line and the benchmarks stay in Python.
 
 ## Install
 
-The crate is not on crates.io yet; depend on it through git:
+The crate is on crates.io as [`ucci`](https://crates.io/crates/ucci):
 
 ```toml
 [dependencies]
-ucci = { git = "https://github.com/varunkotte6/ucci" }
+ucci = "0.1"
 ```
 
 The default feature `json` adds router files and serde support (dependencies `serde` and

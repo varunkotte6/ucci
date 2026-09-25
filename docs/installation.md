@@ -62,11 +62,11 @@ full development workflow: tests on Python 3.9, golden vectors, the Rust crate a
 
 ## Rust
 
-The Rust crate lives in `rust/` and is not on crates.io yet. Depend on it through git:
+The Rust crate lives in `rust/` and is published on crates.io as [`ucci`](https://crates.io/crates/ucci):
 
 ```toml
 [dependencies]
-ucci = { git = "https://github.com/varunkotte6/ucci" }
+ucci = "0.1"
 ```
 
 It supports Rust 1.70 and newer; see the [Rust guide](guides/rust.md).

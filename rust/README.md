@@ -28,7 +28,7 @@ between the two.
 
 ```toml
 [dependencies]
-ucci = { git = "https://github.com/varunkotte6/ucci" }
+ucci = "0.1"
 ```
 
 The default feature `json` adds router files and serde support (dependencies:

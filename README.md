@@ -4,6 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://github.com/varunkotte6/ucci/blob/main/LICENSE)
 [![arXiv](https://img.shields.io/badge/arXiv-2605.18796-b31b1b)](https://arxiv.org/abs/2605.18796)
 [![PyPI](https://img.shields.io/pypi/v/ucci-router)](https://pypi.org/project/ucci-router/)
+[![crates.io](https://img.shields.io/crates/v/ucci)](https://crates.io/crates/ucci)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/varunkotte6/ucci/blob/main/examples/quickstart.ipynb)
 
 Reference implementation of **UCCI** from Varun Kotte,
@@ -151,7 +152,7 @@ ratio from logged latencies, `--json` prints machine-readable output, and the ex
 
 ```toml
 [dependencies]
-ucci = { git = "https://github.com/varunkotte6/ucci" }
+ucci = "0.1"
 ```
 
 ```rust
