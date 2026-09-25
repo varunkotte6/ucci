@@ -24,15 +24,13 @@ meets an accuracy target at the lowest measured cost.
   for bit on the shared golden vectors.
 - **Public replication** on CoNLL-2003 with open models (`benchmarks/conll2003`).
 
-Documentation: [`docs/`](docs/index.md)
+Documentation: [`docs/`](https://github.com/varunkotte6/ucci/blob/main/docs/index.md)
 
 ## Install
 
-The package is not on PyPI yet. Install it from GitHub:
-
 ```bash
-pip install "ucci @ git+https://github.com/varunkotte6/ucci"                 # numpy only
-pip install "ucci[plot,openai] @ git+https://github.com/varunkotte6/ucci"    # with extras
+pip install ucci                   # numpy only
+pip install "ucci[plot,openai]"    # with extras
 ```
 
 Extras: `plot` (matplotlib), `openai` (the SDK, for live calls), `transformers` (torch and
@@ -106,8 +104,8 @@ regularity conditions and bounded `u(x)`, the expected calibration error of the 
 
 Because `g` is non-decreasing, a threshold on `p_hat` is also a threshold on `u`. Calibration is
 what gives `theta` its meaning: an error probability that can be set from a budget, compared
-across models and monitored over time. The [method page](docs/method.md)
-states the results precisely, and [paper mapping](docs/paper_mapping.md)
+across models and monitored over time. The [method page](https://github.com/varunkotte6/ucci/blob/main/docs/method.md)
+states the results precisely, and [paper mapping](https://github.com/varunkotte6/ucci/blob/main/docs/paper_mapping.md)
 maps every element of Sections 4 to 6 and Appendices A and B to the code.
 
 ## Serving stacks
@@ -187,7 +185,7 @@ print(format_comparison(rows))
 
 ## Replication on CoNLL-2003
 
-[`benchmarks/conll2003`](benchmarks/conll2003/README.md) runs the full pipeline on public data:
+[`benchmarks/conll2003`](https://github.com/varunkotte6/ucci/blob/main/benchmarks/conll2003/README.md) runs the full pipeline on public data:
 CoNLL-2003 (validation and test, 6,703 sentences) with Qwen2.5-1.5B-Instruct as the small model
 and Qwen2.5-7B-Instruct as the large one, a 30/20/50 split, and costs set from latency measured
 on the machine (c_l / c_s = 2.50 on an Apple M5 Max).
@@ -201,7 +199,7 @@ on the machine (c_l / c_s = 2.50 on an Apple M5 Max).
 UCCI meets the target at 29% lower cost than always calling the 7B model. Isotonic calibration
 turns the raw margin signal into a usable error probability (test ECE 0.698 to 0.015):
 
-<p align="center"><img src="docs/assets/conll2003_reliability.png" width="420" alt="Reliability diagram on the CoNLL-2003 test split"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/varunkotte6/ucci/main/docs/assets/conll2003_reliability.png" width="420" alt="Reliability diagram on the CoNLL-2003 test split"></p>
 
 One command reproduces it: `bash benchmarks/conll2003/run_full.sh`.
 
