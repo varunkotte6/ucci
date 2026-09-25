@@ -29,8 +29,8 @@ Documentation: [`docs/`](https://github.com/varunkotte6/ucci/blob/main/docs/inde
 ## Install
 
 ```bash
-pip install ucci                   # numpy only
-pip install "ucci[plot,openai]"    # with extras
+pip install "ucci @ git+https://github.com/varunkotte6/ucci"                # numpy only
+pip install "ucci[plot,openai] @ git+https://github.com/varunkotte6/ucci"   # with extras
 ```
 
 Extras: `plot` (matplotlib), `openai` (the SDK, for live calls), `transformers` (torch and

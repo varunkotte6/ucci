@@ -4,22 +4,16 @@ UCCI needs Python 3.9 or newer and numpy 1.20 or newer. Importing `ucci` imports
 nothing else; the optional dependencies below are imported only by the functions that need
 them.
 
-## From PyPI
+## From GitHub
 
 ```bash
-pip install ucci
+pip install "ucci @ git+https://github.com/varunkotte6/ucci"
 ```
 
 With extras, for example plotting and the OpenAI SDK:
 
 ```bash
-pip install "ucci[plot,openai]"
-```
-
-The latest development version installs from GitHub:
-
-```bash
-pip install "ucci @ git+https://github.com/varunkotte6/ucci"
+pip install "ucci[plot,openai] @ git+https://github.com/varunkotte6/ucci"
 ```
 
 Check the installation:
