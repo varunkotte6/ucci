@@ -65,13 +65,13 @@ FORMAT_NAME = "ucci-router"
 #: The format version this package writes and reads.
 FORMAT_VERSION = 1
 
-_FALLBACK_VERSION = "0.1.0"
+_FALLBACK_VERSION = "0.1.1"
 
 PathLike = Union[str, "os.PathLike[str]"]
 
 
 def _package_version() -> str:
-    """Installed version of this package, or ``"0.1.0"`` when not installed."""
+    """Installed version of this package, or ``"0.1.1"`` when not installed."""
     from importlib import metadata
 
     for name in ("ucci-router", "ucci"):

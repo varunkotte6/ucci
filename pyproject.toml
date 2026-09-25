@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ucci-router"
-version = "0.1.0"
+version = "0.1.1"
 description = "UCCI: calibrated uncertainty for cost-optimal LLM cascade routing (token-margin signal, isotonic calibration, constrained threshold selection)"
 readme = "README.md"
 requires-python = ">=3.9"

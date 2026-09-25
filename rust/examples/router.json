@@ -8,5 +8,5 @@
   "cost_model": "routing",
   "tau": 0.9,
   "grid_step": 0.005,
-  "created_by": "ucci-python 0.1.0"
+  "created_by": "ucci-python 0.1.1"
 }

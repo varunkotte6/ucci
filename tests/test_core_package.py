@@ -59,7 +59,7 @@ def test_version_fallback(monkeypatch):
 
     monkeypatch.setattr(metadata, "version", missing)
     monkeypatch.setattr(metadata, "packages_distributions", lambda: {}, raising=False)
-    assert ucci_io._package_version() == "0.1.0"
+    assert ucci_io._package_version() == "0.1.1"
 
 
 def test_version_from_renamed_distribution(monkeypatch):

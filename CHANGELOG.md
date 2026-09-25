@@ -8,6 +8,12 @@ old readers.
 
 ## [Unreleased]
 
+## [0.1.1]
+
+- Published on PyPI as `ucci-router` (the import name stays `ucci`).
+- Colab quickstart notebook (`examples/quickstart.ipynb`).
+- Archived on Zenodo for a citable DOI.
+
 ## [0.1.0]
 
 First public release: the reference implementation of Varun Kotte, "UCCI: Calibrated
@@ -51,5 +57,6 @@ Uncertainty for Cost-Optimal LLM Cascade Routing", arXiv:2605.18796 (2026).
   mapping with every implementation choice, guides per serving stack, and the API reference.
   README and documentation snippets are executed by `docs/_ext/check_snippets.py`.
 
-[Unreleased]: https://github.com/varunkotte6/ucci/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/varunkotte6/ucci/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/varunkotte6/ucci/releases/tag/v0.1.1
 [0.1.0]: https://github.com/varunkotte6/ucci/releases/tag/v0.1.0
